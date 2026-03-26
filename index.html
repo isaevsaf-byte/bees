@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tian Shan Queens — Mountain Beekeeping from Uzbekistan</title>
+  <meta name="description" content="Premium Carpathian queen bees and mountain honey from the Tian Shan highlands of Uzbekistan. UK wholesale supply with full health certification." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Cinzel:wght@400;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:     #c9a84c;
+      --gold-lt:  #e8c96a;
+      --green:    #0e1f0e;
+      --green-md: #1a3320;
+      --green-lt: #2a4a30;
+      --cream:    #f2ead8;
+      --cream-lt: #faf6ee;
+      --black:    #080c08;
+      --text:     #d8d0bc;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--text);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 3rem;
+      background: transparent;
+      transition: background 0.4s, backdrop-filter 0.4s;
+    }
+    nav.scrolled {
+      background: rgba(8, 12, 8, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+    }
+    .nav-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 1.05rem;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--cream);
+      text-decoration: none;
+      opacity: 0.7;
+      transition: opacity 0.2s, color 0.2s;
+    }
+    .nav-links a:hover { opacity: 1; color: var(--gold); }
+
+    .nav-cta {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      padding: 0.55rem 1.4rem;
+      text-decoration: none;
+      transition: background 0.25s, color 0.25s;
+    }
+    .nav-cta:hover { background: var(--gold); color: var(--black); }
+
+    /* ─── HERO ─── */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(8,12,8,0.55) 0%, rgba(8,12,8,0.3) 40%, rgba(8,12,8,0.75) 100%),
+        url('media/images/hero.jpg') center/cover no-repeat;
+      transform: scale(1.08);
+      transition: transform 0.1s linear;
+    }
+    /* Fallback gradient when no hero image */
+    .hero-bg-fallback {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(42, 74, 48, 0.6) 0%, transparent 70%),
+        linear-gradient(160deg, #080c08 0%, #0e1f0e 50%, #080c08 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 860px;
+      padding: 0 2rem;
+    }
+    .hero-tag {
+      display: inline-block;
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(201,168,76,0.4);
+      padding: 0.4rem 1.2rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.2rem, 8vw, 6.5rem);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--cream-lt);
+      letter-spacing: -0.01em;
+      margin-bottom: 1.5rem;
+    }
+    h1 em {
+      font-style: italic;
+      color: var(--gold-lt);
+    }
+    .hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(242, 234, 216, 0.75);
+      max-width: 580px;
+      margin: 0 auto 2.8rem;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--gold);
+      color: var(--black);
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 1rem 2.2rem;
+      text-decoration: none;
+      transition: background 0.25s, transform 0.2s;
+    }
+    .btn-primary:hover { background: var(--gold-lt); transform: translateY(-2px); }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      border: 1px solid rgba(242,234,216,0.35);
+      color: var(--cream);
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 1rem 2.2rem;
+      text-decoration: none;
+      transition: border-color 0.25s, color 0.25s, transform 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0.4;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .scroll-hint::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollLine 1.8s ease-in-out infinite;
+    }
+    @keyframes scrollLine { 0%,100% { opacity: 0.3 } 50% { opacity: 1 } }
+
+    /* ─── SECTIONS ─── */
+    section { padding: 7rem 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .section-label {
+      display: inline-block;
+      font-family: 'Cinzel', serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--cream-lt);
+      margin-bottom: 1.8rem;
+    }
+    h2 em { font-style: italic; color: var(--gold-lt); }
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(to right, var(--gold), transparent);
+      margin-bottom: 2rem;
+    }
+
+    /* ─── ABOUT ─── */
+    #about { background: var(--green); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .about-img {
+      position: relative;
+      aspect-ratio: 4/5;
+      overflow: hidden;
+    }
+    .about-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .about-img-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(145deg, var(--green-md), var(--green-lt));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      border: 1px solid rgba(201,168,76,0.2);
+    }
+    .about-img-placeholder svg { opacity: 0.3; }
+    .about-img-placeholder span {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      opacity: 0.4;
+      text-transform: uppercase;
+    }
+    .about-img::before {
+      content: '';
+      position: absolute;
+      top: -16px; left: -16px;
+      right: 16px; bottom: 16px;
+      border: 1px solid rgba(201,168,76,0.25);
+      z-index: -1;
+    }
+    .stat-row {
+      display: flex;
+      gap: 3rem;
+      margin-top: 2.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(201,168,76,0.15);
+    }
+    .stat .num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat .label {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.6;
+      margin-top: 0.3rem;
+    }
+
+    /* ─── PRODUCTS ─── */
+    #products { background: var(--black); }
+    .products-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-top: 4rem;
+    }
+    .product-card {
+      position: relative;
+      padding: 3.5rem;
+      background: var(--green);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .product-card:hover { transform: translateY(-4px); }
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(to right, var(--gold), transparent);
+    }
+    .product-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5rem;
+      font-weight: 300;
+      color: rgba(201,168,76,0.12);
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+    .product-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      font-weight: 400;
+      color: var(--cream-lt);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .product-card p { font-size: 0.9rem; opacity: 0.7; margin-bottom: 1.5rem; }
+    .product-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: 1px solid rgba(201,168,76,0.35);
+      color: var(--gold);
+      padding: 0.3rem 0.8rem;
+    }
+    .product-img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      margin-bottom: 2rem;
+      display: block;
+    }
+    .product-img-ph {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: var(--green-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      border: 1px dashed rgba(201,168,76,0.2);
+    }
+    .product-img-ph span { font-size: 0.65rem; letter-spacing: 0.15em; opacity: 0.3; text-transform: uppercase; }
+
+    /* ─── WHY US ─── */
+    #why { background: var(--green); }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+    .why-card {
+      padding: 2.5rem;
+      border: 1px solid rgba(201,168,76,0.15);
+      position: relative;
+      transition: border-color 0.3s;
+    }
+    .why-card:hover { border-color: rgba(201,168,76,0.45); }
+    .why-icon {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+    }
+    .why-card h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--cream-lt);
+      margin-bottom: 0.8rem;
+    }
+    .why-card p { font-size: 0.85rem; opacity: 0.65; line-height: 1.75; }
+
+    /* ─── GALLERY ─── */
+    #gallery { background: var(--black); }
+    .gallery-intro { max-width: 600px; margin-bottom: 3.5rem; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+    }
+    .gallery-item {
+      position: relative;
+      aspect-ratio: 1;
+      overflow: hidden;
+      cursor: pointer;
+      background: var(--green-md);
+    }
+    .gallery-item img,
+    .gallery-item video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s;
+    }
+    .gallery-item:hover img,
+    .gallery-item:hover video { transform: scale(1.06); }
+    .gallery-item .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(8,12,8,0);
+      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .gallery-item:hover .overlay { background: rgba(8,12,8,0.35); }
+    .gallery-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      border: 1px dashed rgba(201,168,76,0.2);
+    }
+    .gallery-placeholder span {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      opacity: 0.25;
+      text-transform: uppercase;
+    }
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-inner { max-width: 90vw; max-height: 90vh; position: relative; }
+    .lightbox-inner img,
+    .lightbox-inner video { max-width: 90vw; max-height: 85vh; object-fit: contain; }
+    .lightbox-close {
+      position: absolute;
+      top: -2.5rem; right: 0;
+      font-size: 1.5rem;
+      color: var(--gold);
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* ─── CONTACT ─── */
+    #contact { background: var(--green); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .contact-info h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--cream-lt);
+      margin-bottom: 0.6rem;
+    }
+    .contact-info p { opacity: 0.6; font-size: 0.88rem; margin-bottom: 2rem; }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: #25d366;
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      padding: 1rem 1.8rem;
+      text-decoration: none;
+      margin-bottom: 1.5rem;
+      transition: background 0.25s, transform 0.2s;
+    }
+    .whatsapp-btn:hover { background: #1da851; transform: translateY(-2px); }
+    .contact-direct {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .contact-direct a {
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.88rem;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    .contact-direct a:hover { opacity: 1; }
+
+    /* Form */
+    .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,168,76,0.2);
+      color: var(--cream);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.88rem;
+      padding: 0.9rem 1.1rem;
+      outline: none;
+      transition: border-color 0.25s;
+      appearance: none;
+    }
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder { opacity: 0.35; }
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus { border-color: rgba(201,168,76,0.6); }
+    .contact-form textarea { resize: vertical; min-height: 130px; }
+    .contact-form select option { background: var(--green-md); }
+    .contact-form .form-note {
+      font-size: 0.72rem;
+      opacity: 0.4;
+      line-height: 1.5;
+    }
+    .form-success {
+      display: none;
+      background: rgba(37,211,102,0.1);
+      border: 1px solid rgba(37,211,102,0.3);
+      padding: 1.2rem;
+      font-size: 0.88rem;
+      color: #7ecf9e;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--black);
+      border-top: 1px solid rgba(201,168,76,0.12);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .footer-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.22em;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+    footer p {
+      font-size: 0.75rem;
+      opacity: 0.3;
+      letter-spacing: 0.08em;
+    }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 900px) {
+      nav { padding: 1.1rem 1.5rem; }
+      .nav-links { display: none; }
+      .about-grid,
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .products-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .form-row { grid-template-columns: 1fr; }
+      .about-img { aspect-ratio: 4/3; }
+    }
+    @media (max-width: 560px) {
+      section { padding: 5rem 1.2rem; }
+      .why-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .stat-row { gap: 1.5rem; }
+      .product-card { padding: 2rem; }
+    }
+
+    /* ─── ANIMATIONS ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">TIAN SHAN QUEENS</a>
+  <ul class="nav-links">
+    <li><a href="#about">Our Story</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/447715123595?text=Hello%2C%20I%27m%20interested%20in%20wholesale%20supply%20from%20Tian%20Shan%20Queens." class="nav-cta" target="_blank">Enquire Now</a>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <div class="hero-bg-fallback"></div>
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Tian Shan Mountains · Uzbekistan · Est. 2015</div>
+    <h1>Where <em>Ancient Genetics</em><br/>Meet Pure Highland Air</h1>
+    <p class="hero-sub">Carpathian queen bees and mountain-pressed honey — sourced from 10,000 colonies at altitude, supplied to UK wholesale buyers with full health certification.</p>
+    <div class="hero-ctas">
+      <a href="https://wa.me/447715123595?text=Hello%2C%20I%27m%20interested%20in%20wholesale%20supply%20from%20Tian%20Shan%20Queens." class="btn-primary" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp Us
+      </a>
+      <a href="#contact" class="btn-secondary">Send an Enquiry</a>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll</div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img reveal">
+        <!-- Replace with: <img src="media/images/about.jpg" alt="Tian Shan apiary" /> -->
+        <div class="about-img-placeholder" id="aboutImgHolder">
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9l4-4 4 4 4-6 4 6"/><circle cx="8.5" cy="13.5" r="1.5"/></svg>
+          <span>Place about.jpg in media/images/</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="section-label reveal">Our Story</span>
+        <h2 class="reveal">Raised at <em>2,000 Metres</em><br/>Above the Silk Road</h2>
+        <div class="divider reveal"></div>
+        <p class="reveal">The Tian Shan range — the "Celestial Mountains" — has sustained beekeeping traditions for centuries. Our apiaries sit high in the unpolluted valleys of Uzbekistan, where wildflower meadows bloom without herbicides and cold winters produce bees of exceptional resilience.</p>
+        <p class="reveal reveal-delay-1" style="margin-top:1rem;">We specialise in Carpathian queen bees — a breed prized across Europe for gentleness, productivity, and low swarming tendency. Every queen is reared in our high-altitude facility and dispatched to UK buyers from April through to August.</p>
+        <div class="stat-row reveal reveal-delay-2">
+          <div class="stat"><div class="num">10K</div><div class="label">Active Colonies</div></div>
+          <div class="stat"><div class="num">3rd</div><div class="label">Generation Family</div></div>
+          <div class="stat"><div class="num">2,000m</div><div class="label">Altitude</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PRODUCTS ─── -->
+<section id="products">
+  <div class="container">
+    <span class="section-label reveal">What We Supply</span>
+    <h2 class="reveal">Two Products.<br/><em>Uncompromising</em> Quality.</h2>
+    <div class="divider reveal"></div>
+    <div class="products-grid">
+      <div class="product-card reveal">
+        <!-- Replace with: <img class="product-img" src="media/images/queens.jpg" alt="Carpathian Queen Bees" /> -->
+        <div class="product-img-ph" id="queensImgHolder">
+          <span>Place queens.jpg in media/images/</span>
+        </div>
+        <div class="product-num">01</div>
+        <h3>Carpathian<br/>Queen Bees</h3>
+        <p>Mated queens reared at altitude in pure mountain conditions. Renowned for winter hardiness, high honey yields, and exceptional temperament. Supplied in batches from April dispatch.</p>
+        <div class="product-tags">
+          <span class="tag">April – August</span>
+          <span class="tag">Mated Queens</span>
+          <span class="tag">CITES Compliant</span>
+          <span class="tag">UK Health Cert.</span>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-delay-2">
+        <!-- Replace with: <img class="product-img" src="media/images/honey.jpg" alt="Mountain Honey" /> -->
+        <div class="product-img-ph" id="honeyImgHolder">
+          <span>Place honey.jpg in media/images/</span>
+        </div>
+        <div class="product-num">02</div>
+        <h3>Tian Shan<br/>Mountain Honey</h3>
+        <p>Raw, unfiltered wildflower honey pressed from high-altitude hives. Rich in enzymes and botanical diversity, with a flavour profile that reflects the untouched ecology of Central Asia.</p>
+        <div class="product-tags">
+          <span class="tag">Bulk Wholesale</span>
+          <span class="tag">Raw & Unfiltered</span>
+          <span class="tag">Lab Certified</span>
+          <span class="tag">Export Ready</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHY US ─── -->
+<section id="why">
+  <div class="container">
+    <span class="section-label reveal">Why Tian Shan Queens</span>
+    <h2 class="reveal">Everything a UK Wholesale<br/>Buyer <em>Needs</em></h2>
+    <div class="divider reveal"></div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon">🏔️</div>
+        <h4>Pristine Mountain Genetics</h4>
+        <p>Isolated high-altitude apiaries ensure queens are free from the cross-breeding and disease pressures common in lowland operations. Pure Carpathian lineage, proven over generations.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-icon">📜</div>
+        <h4>Full UK Health Certification</h4>
+        <p>We handle all documentation: phytosanitary certificates, health checks, and APHA-compliant export paperwork. You receive queens and honey ready for UK customs, with zero bureaucratic risk.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-icon">📦</div>
+        <h4>Reliable Seasonal Supply</h4>
+        <p>Consistent batch availability from April through August for queens, and year-round honey availability. We work with commercial apiaries and cooperatives who plan ahead — so should you.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-icon">🤝</div>
+        <h4>Direct Producer Pricing</h4>
+        <p>No middlemen. We are the producers. That means transparent wholesale pricing, flexible volumes, and a long-term relationship built on trust rather than intermediary margins.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-4">
+        <div class="why-icon">🌿</div>
+        <h4>Zero Pesticide Environment</h4>
+        <p>The Tian Shan highlands have no industrial agriculture. Our bees forage on wild flora untouched by herbicides or pesticides — a claim that fewer and fewer European suppliers can make.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-5">
+        <div class="why-icon">🛡️</div>
+        <h4>Varroa-Resilient Stock</h4>
+        <p>Carpathian bees from our mountain lines show strong hygienic behaviour and natural Varroa resistance — reducing your colony losses and treatment costs over the long term.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── GALLERY ─── -->
+<section id="gallery">
+  <div class="container">
+    <span class="section-label reveal">The Apiary</span>
+    <h2 class="reveal"><em>Life</em> at Altitude</h2>
+    <div class="divider reveal"></div>
+    <p class="gallery-intro reveal" style="opacity:0.65;font-size:0.9rem;">A glimpse into our world — mountain apiaries, queen rearing, the harvest, and the landscape that makes it all possible.</p>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Populated by JS from media/images/ and media/videos/ -->
+      <!-- Placeholders shown until real media is added -->
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="section-label reveal">Get in Touch</span>
+        <h2 class="reveal">Ready to <em>Source</em><br/>from the Mountains?</h2>
+        <div class="divider reveal"></div>
+        <p class="reveal">We supply UK beekeeping businesses, honey retailers, and commercial apiaries. Whether you need ten queens or ten thousand, reach out and we'll discuss your season.</p>
+
+        <div class="reveal" style="margin-bottom:2rem;">
+          <a href="https://wa.me/447715123595?text=Hello%2C%20I%27m%20interested%20in%20wholesale%20supply%20from%20Tian%20Shan%20Queens." class="whatsapp-btn" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Message on WhatsApp
+          </a>
+        </div>
+
+        <div class="contact-direct reveal">
+          <a href="mailto:saf@safarisaev.ai">✉ saf@safarisaev.ai</a>
+          <a href="tel:+447715123595">📞 +44 7715 123595</a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap reveal">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Email address" required />
+          </div>
+          <input type="text" name="company" placeholder="Company / Business name" />
+          <select name="interest" required>
+            <option value="" disabled selected>I'm interested in…</option>
+            <option value="queens">Carpathian Queen Bees</option>
+            <option value="honey">Mountain Honey (Wholesale)</option>
+            <option value="both">Both Products</option>
+            <option value="other">General Enquiry</option>
+          </select>
+          <textarea name="message" placeholder="Tell us about your requirements — volumes, timing, location…"></textarea>
+          <p class="form-note">We respond within 24 hours. Your details are never shared with third parties.</p>
+          <button type="submit" class="btn-primary" style="border:none;cursor:pointer;width:100%;justify-content:center;">Send Enquiry</button>
+          <div class="form-success" id="formSuccess">
+            Thank you — we've received your enquiry and will be in touch shortly.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-logo">TIAN SHAN QUEENS</div>
+  <p>Mountain Beekeeping · Uzbekistan · Supplying the United Kingdom</p>
+  <p style="margin-top:0.5rem;">© 2026 Tian Shan Queens. All rights reserved.</p>
+</footer>
+
+<!-- ─── LIGHTBOX ─── -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-inner" id="lightboxInner">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+  </div>
+</div>
+
+<script>
+/* ─── NAV SCROLL ─── */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+/* ─── PARALLAX HERO ─── */
+const heroBg = document.getElementById('heroBg');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  if (y < window.innerHeight) {
+    heroBg.style.transform = `scale(1.08) translateY(${y * 0.25}px)`;
+  }
+}, { passive: true });
+
+/* ─── REVEAL ON SCROLL ─── */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+/* ─── GALLERY ─── */
+/*
+ HOW TO ADD MEDIA:
+ 1. Drop image files (.jpg .jpeg .png .webp) into  media/images/
+ 2. Drop video files (.mp4 .webm .mov) into         media/videos/
+ 3. Edit the arrays below — add filenames exactly as saved.
+ 4. The gallery will display them automatically in a grid with lightbox.
+*/
+
+const galleryImages = [
+  // 'apiary-1.jpg',
+  // 'queens-rearing.jpg',
+  // 'honey-harvest.jpg',
+  // 'mountain-view.jpg',
+  // 'hive-inspection.jpg',
+  // 'wildflowers.jpg',
+];
+
+const galleryVideos = [
+  // 'apiary-tour.mp4',
+  // 'queen-introduction.mp4',
+];
+
+const grid = document.getElementById('galleryGrid');
+
+function buildGallery() {
+  const allMedia = [
+    ...galleryImages.map(f => ({ type: 'image', file: 'media/images/' + f })),
+    ...galleryVideos.map(f => ({ type: 'video', file: 'media/videos/' + f })),
+  ];
+
+  if (allMedia.length === 0) {
+    // Show placeholder grid
+    for (let i = 0; i < 6; i++) {
+      const item = document.createElement('div');
+      item.className = 'gallery-item';
+      item.innerHTML = `<div class="gallery-placeholder">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.25"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9l4-4 4 4 4-6 4 6"/><circle cx="8.5" cy="13.5" r="1.5"/></svg>
+        <span>Add media to gallery</span>
+      </div>`;
+      grid.appendChild(item);
+    }
+    return;
+  }
+
+  allMedia.forEach((media, idx) => {
+    const item = document.createElement('div');
+    item.className = 'gallery-item reveal';
+    if (media.type === 'image') {
+      item.innerHTML = `<img src="${media.file}" alt="Tian Shan apiary" loading="lazy" /><div class="overlay"></div>`;
+      item.addEventListener('click', () => openLightbox('image', media.file));
+    } else {
+      item.innerHTML = `<video src="${media.file}" muted loop playsinline></video><div class="overlay" style="align-items:flex-start;padding:1rem;"><svg width="36" height="36" viewBox="0 0 24 24" fill="white" opacity="0.7"><circle cx="12" cy="12" r="10" fill="rgba(0,0,0,0.5)"/><path d="M10 8l6 4-6 4V8z"/></svg></div>`;
+      const video = item.querySelector('video');
+      item.addEventListener('mouseenter', () => video.play());
+      item.addEventListener('mouseleave', () => { video.pause(); video.currentTime = 0; });
+      item.addEventListener('click', () => openLightbox('video', media.file));
+    }
+    grid.appendChild(item);
+    observer.observe(item);
+  });
+}
+
+/* ─── LIGHTBOX ─── */
+const lightbox = document.getElementById('lightbox');
+const lightboxInner = document.getElementById('lightboxInner');
+const lightboxClose = document.getElementById('lightboxClose');
+
+function openLightbox(type, src) {
+  lightboxInner.querySelectorAll('img, video').forEach(el => el.remove());
+  if (type === 'image') {
+    const img = document.createElement('img');
+    img.src = src;
+    lightboxInner.appendChild(img);
+  } else {
+    const video = document.createElement('video');
+    video.src = src;
+    video.controls = true;
+    video.autoplay = true;
+    lightboxInner.appendChild(video);
+  }
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+lightboxClose.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+  lightboxInner.querySelectorAll('video').forEach(v => v.pause());
+}
+
+/* ─── ABOUT & PRODUCT IMAGES (auto-detect) ─── */
+function tryImage(placeholder, src, alt) {
+  const img = new Image();
+  img.onload = () => {
+    const el = document.getElementById(placeholder);
+    if (el) {
+      const imgTag = document.createElement('img');
+      imgTag.src = src;
+      imgTag.alt = alt;
+      imgTag.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block;';
+      el.replaceWith(imgTag);
+    }
+  };
+  img.src = src;
+}
+
+tryImage('aboutImgHolder', 'media/images/about.jpg', 'Tian Shan apiary');
+tryImage('queensImgHolder', 'media/images/queens.jpg', 'Carpathian queen bees');
+tryImage('honeyImgHolder', 'media/images/honey.jpg', 'Mountain honey');
+
+/* ─── HERO BG (auto-detect) ─── */
+const heroImg = new Image();
+heroImg.onload = () => { heroBg.style.backgroundImage = `linear-gradient(to bottom, rgba(8,12,8,0.55) 0%, rgba(8,12,8,0.3) 40%, rgba(8,12,8,0.75) 100%), url('media/images/hero.jpg')`; };
+heroImg.src = 'media/images/hero.jpg';
+
+/* ─── CONTACT FORM ─── */
+const form = document.getElementById('contactForm');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const btn = form.querySelector('button[type=submit]');
+  const data = new FormData(form);
+  const body = Object.fromEntries(data.entries());
+
+  // mailto fallback (works without a backend)
+  const subject = encodeURIComponent(`Wholesale Enquiry — ${body.interest || 'General'} — ${body.name}`);
+  const text = encodeURIComponent(
+    `Name: ${body.name}\nEmail: ${body.email}\nCompany: ${body.company || '—'}\nInterest: ${body.interest}\n\nMessage:\n${body.message}`
+  );
+  window.location.href = `mailto:saf@safarisaev.ai?subject=${subject}&body=${text}`;
+
+  document.getElementById('formSuccess').style.display = 'block';
+  form.reset();
+});
+
+buildGallery();
+</script>
+</body>
+</html>
