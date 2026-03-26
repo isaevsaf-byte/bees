@@ -885,17 +885,26 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 */
 
 const galleryImages = [
-  // 'apiary-1.jpg',
-  // 'queens-rearing.jpg',
-  // 'honey-harvest.jpg',
-  // 'mountain-view.jpg',
-  // 'hive-inspection.jpg',
-  // 'wildflowers.jpg',
+  'photo_2026-03-26 12.21.49.jpeg',
+  'photo_2026-03-26 12.21.55.jpeg',
+  'photo_2026-03-26 12.21.59.jpeg',
+  'photo_2026-03-26 12.22.01.jpeg',
+  'photo_2026-03-26 12.22.03.jpeg',
+  'photo_2026-03-26 12.22.08.jpeg',
+  'photo_2026-03-26 12.22.49.jpeg',
+  'photo_2026-03-26 12.22.51.jpeg',
+  'photo_2026-03-26 12.22.53.jpeg',
+  'photo_2026-03-26 12.22.54.jpeg',
+  'photo_2026-03-26 12.22.58.jpeg',
+  'photo_2026-03-26 12.22.59.jpeg',
+  'photo_2026-03-26 12.23.01.jpeg',
+  'photo_2026-03-26 12.23.03.jpeg',
+  'photo_2026-03-26 12.23.17.jpeg',
 ];
 
 const galleryVideos = [
-  // 'apiary-tour.mp4',
-  // 'queen-introduction.mp4',
+  'IMG_4380.MOV',
+  'IMG_4383.MOV',
 ];
 
 const grid = document.getElementById('galleryGrid');
@@ -986,14 +995,14 @@ function tryImage(placeholder, src, alt) {
   img.src = src;
 }
 
-tryImage('aboutImgHolder', 'media/images/about.jpg', 'Tian Shan apiary');
-tryImage('queensImgHolder', 'media/images/queens.jpg', 'Carpathian queen bees');
-tryImage('honeyImgHolder', 'media/images/honey.jpg', 'Mountain honey');
+tryImage('aboutImgHolder', 'media/images/photo_2026-03-26 12.22.05.jpeg', 'Beekeeper inspecting a frame at the apiary');
+tryImage('queensImgHolder', 'media/images/photo_2026-03-26 12.22.50.jpeg', 'Carpathian queen bees in nuc box');
+tryImage('honeyImgHolder', 'media/images/photo_2026-03-26 12.21.57.jpeg', 'Golden honeycomb frame packed with bees');
 
 /* ─── HERO BG (auto-detect) ─── */
 const heroImg = new Image();
-heroImg.onload = () => { heroBg.style.backgroundImage = `linear-gradient(to bottom, rgba(8,12,8,0.55) 0%, rgba(8,12,8,0.3) 40%, rgba(8,12,8,0.75) 100%), url('media/images/hero.jpg')`; };
-heroImg.src = 'media/images/hero.jpg';
+heroImg.onload = () => { heroBg.style.backgroundImage = `linear-gradient(to bottom, rgba(8,12,8,0.55) 0%, rgba(8,12,8,0.3) 40%, rgba(8,12,8,0.75) 100%), url('media/images/photo_2026-03-26 12.23.15.jpeg')`; };
+heroImg.src = 'media/images/photo_2026-03-26 12.23.15.jpeg';
 
 /* ─── CONTACT FORM ─── */
 const form = document.getElementById('contactForm');
