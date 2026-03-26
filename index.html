@@ -20,7 +20,7 @@
       --cream:    #f2ead8;
       --cream-lt: #faf6ee;
       --black:    #080c08;
-      --text:     #d8d0bc;
+      --text:     #ede7d9;
     }
 
     html { scroll-behavior: smooth; }
@@ -29,9 +29,9 @@
       background: var(--black);
       color: var(--text);
       font-family: 'Jost', sans-serif;
-      font-weight: 300;
+      font-weight: 400;
       font-size: 1rem;
-      line-height: 1.7;
+      line-height: 1.8;
       overflow-x: hidden;
     }
 
@@ -72,7 +72,7 @@
       text-transform: uppercase;
       color: var(--cream);
       text-decoration: none;
-      opacity: 0.7;
+      opacity: 0.85;
       transition: opacity 0.2s, color 0.2s;
     }
     .nav-links a:hover { opacity: 1; color: var(--gold); }
@@ -149,10 +149,10 @@
     }
     .hero-sub {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-      font-weight: 300;
+      font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+      font-weight: 400;
       font-style: italic;
-      color: rgba(242, 234, 216, 0.75);
+      color: rgba(242, 234, 216, 0.92);
       max-width: 580px;
       margin: 0 auto 2.8rem;
     }
@@ -235,8 +235,8 @@
     h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(2.2rem, 5vw, 3.8rem);
-      font-weight: 300;
-      line-height: 1.1;
+      font-weight: 400;
+      line-height: 1.12;
       color: var(--cream-lt);
       margin-bottom: 1.8rem;
     }
@@ -311,7 +311,7 @@
       font-size: 0.72rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      opacity: 0.6;
+      opacity: 0.82;
       margin-top: 0.3rem;
     }
 
@@ -354,7 +354,7 @@
       margin-bottom: 1rem;
       line-height: 1.2;
     }
-    .product-card p { font-size: 0.9rem; opacity: 0.7; margin-bottom: 1.5rem; }
+    .product-card p { font-size: 0.95rem; opacity: 0.9; margin-bottom: 1.5rem; line-height: 1.8; }
     .product-tags {
       display: flex;
       flex-wrap: wrap;
@@ -413,7 +413,7 @@
       color: var(--cream-lt);
       margin-bottom: 0.8rem;
     }
-    .why-card p { font-size: 0.85rem; opacity: 0.65; line-height: 1.75; }
+    .why-card p { font-size: 0.92rem; opacity: 0.88; line-height: 1.82; }
 
     /* ─── GALLERY ─── */
     #gallery { background: var(--black); }
@@ -505,7 +505,7 @@
       color: var(--cream-lt);
       margin-bottom: 0.6rem;
     }
-    .contact-info p { opacity: 0.6; font-size: 0.88rem; margin-bottom: 2rem; }
+    .contact-info p { opacity: 0.85; font-size: 0.95rem; margin-bottom: 2rem; line-height: 1.8; }
 
     .whatsapp-btn {
       display: inline-flex;
@@ -531,8 +531,8 @@
     .contact-direct a {
       color: var(--gold);
       text-decoration: none;
-      font-size: 0.88rem;
-      opacity: 0.8;
+      font-size: 0.95rem;
+      opacity: 1;
       transition: opacity 0.2s;
     }
     .contact-direct a:hover { opacity: 1; }
@@ -562,9 +562,9 @@
     .contact-form textarea { resize: vertical; min-height: 130px; }
     .contact-form select option { background: var(--green-md); }
     .contact-form .form-note {
-      font-size: 0.72rem;
-      opacity: 0.4;
-      line-height: 1.5;
+      font-size: 0.78rem;
+      opacity: 0.65;
+      line-height: 1.6;
     }
     .form-success {
       display: none;
@@ -590,8 +590,8 @@
       margin-bottom: 0.8rem;
     }
     footer p {
-      font-size: 0.75rem;
-      opacity: 0.3;
+      font-size: 0.78rem;
+      opacity: 0.55;
       letter-spacing: 0.08em;
     }
 
@@ -618,8 +618,8 @@
     /* ─── ANIMATIONS ─── */
     .reveal {
       opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
+      transform: translateY(22px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
     .reveal.visible {
       opacity: 1;
@@ -681,8 +681,8 @@
         <span class="section-label reveal">Our Story</span>
         <h2 class="reveal">Raised at <em>2,000 Metres</em><br/>Above the Silk Road</h2>
         <div class="divider reveal"></div>
-        <p class="reveal">The Tian Shan range — the "Celestial Mountains" — has sustained beekeeping traditions for centuries. Our apiaries sit high in the unpolluted valleys of Uzbekistan, where wildflower meadows bloom without herbicides and cold winters produce bees of exceptional resilience.</p>
-        <p class="reveal reveal-delay-1" style="margin-top:1rem;">We specialise in Carpathian queen bees — a breed prized across Europe for gentleness, productivity, and low swarming tendency. Every queen is reared in our high-altitude facility and dispatched to UK buyers from April through to August.</p>
+        <p class="reveal" style="font-size:0.97rem;line-height:1.85;">The Tian Shan range — the "Celestial Mountains" — has sustained beekeeping traditions for centuries. Our apiaries sit high in the unpolluted valleys of Uzbekistan, where wildflower meadows bloom without herbicides and cold winters produce bees of exceptional resilience.</p>
+        <p class="reveal reveal-delay-1" style="margin-top:1.2rem;font-size:0.97rem;line-height:1.85;">We specialise in Carpathian queen bees — a breed prized across Europe for gentleness, productivity, and low swarming tendency. Every queen is reared in our high-altitude facility and dispatched to UK buyers from April through to August.</p>
         <div class="stat-row reveal reveal-delay-2">
           <div class="stat"><div class="num">10K</div><div class="label">Active Colonies</div></div>
           <div class="stat"><div class="num">3rd</div><div class="label">Generation Family</div></div>
@@ -781,7 +781,7 @@
     <span class="section-label reveal">The Apiary</span>
     <h2 class="reveal"><em>Life</em> at Altitude</h2>
     <div class="divider reveal"></div>
-    <p class="gallery-intro reveal" style="opacity:0.65;font-size:0.9rem;">A glimpse into our world — mountain apiaries, queen rearing, the harvest, and the landscape that makes it all possible.</p>
+    <p class="gallery-intro reveal" style="font-size:0.95rem;">A glimpse into our world — mountain apiaries, queen rearing, the harvest, and the landscape that makes it all possible.</p>
 
     <div class="gallery-grid" id="galleryGrid">
       <!-- Populated by JS from media/images/ and media/videos/ -->
@@ -872,7 +872,7 @@ window.addEventListener('scroll', () => {
 /* ─── REVEAL ON SCROLL ─── */
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-}, { threshold: 0.12 });
+}, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 /* ─── GALLERY ─── */
