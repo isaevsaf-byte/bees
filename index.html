@@ -980,7 +980,12 @@ function closeLightbox() {
 }
 
 /* ─── ABOUT & PRODUCT IMAGES (auto-detect) ─── */
-function tryImage(placeholder, src, alt) {
+/* The replacement has to carry the class the stylesheet expects. It did not, so
+   .product-img never applied and the product photographs rendered at their own
+   portrait ratio, about 950px tall, instead of the 16/9 band the card is laid
+   out for. The about image was unaffected: .about-img img is a descendant rule
+   and matches a bare img, which is why only two of the three looked wrong. */
+function tryImage(placeholder, src, alt, className) {
   const img = new Image();
   img.onload = () => {
     const el = document.getElementById(placeholder);
@@ -988,7 +993,8 @@ function tryImage(placeholder, src, alt) {
       const imgTag = document.createElement('img');
       imgTag.src = src;
       imgTag.alt = alt;
-      imgTag.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block;';
+      if (className) imgTag.className = className;
+      else imgTag.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block;';
       el.replaceWith(imgTag);
     }
   };
@@ -996,8 +1002,8 @@ function tryImage(placeholder, src, alt) {
 }
 
 tryImage('aboutImgHolder', 'media/images/photo_2026-03-26 12.22.05.jpeg', 'Beekeeper inspecting a frame at the apiary');
-tryImage('queensImgHolder', 'media/images/photo_2026-03-26 12.22.50.jpeg', 'Carpathian queen bees in nuc box');
-tryImage('honeyImgHolder', 'media/images/photo_2026-03-26 12.21.57.jpeg', 'Golden honeycomb frame packed with bees');
+tryImage('queensImgHolder', 'media/images/photo_2026-03-26 12.22.50.jpeg', 'Carpathian queen bees in nuc box', 'product-img');
+tryImage('honeyImgHolder', 'media/images/photo_2026-03-26 12.21.57.jpeg', 'Golden honeycomb frame packed with bees', 'product-img');
 
 /* ─── HERO BG (auto-detect) ─── */
 const heroImg = new Image();
